@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lucia Erramuspe | Psicóloga</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" href="logo.png">
+
+<meta property="og:title" content="Lucia Erramuspe | Psicóloga">
+
+<meta property="og:description" content="Psicóloga. Consultas presenciales y online.">
+
+<meta property="og:image" content="preview.jpg">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://tuweb.com">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Psychologist",
+ "name": "Lucia Erramuspe",
+ "telephone": "+59897331847",
+ "email": "lerramuspe.psi@gmail.com"
+}
+</script>
+
+</head>
+
+<body>
+
+
+
+<div class="card">
+
+<div class="header">
+
+<img src="perfil.jpg" class="profile">
+
+</div>
+
+<div class="info">
+
+<h1>Lucia Erramuspe</h1>
+
+<p class="subtitle">Psicóloga</p>
+<p class="registro">MSP 3458095 · CJPPU 218080</p>
+
+
+
+<div class="buttons">
+
+<a class="btn primary" href="https://wa.me/59897331847?text=Hola%20Lucia%2C%20vi%20tu%20tarjeta%20digital%20y%20quisiera%20consultar%20por%20una%20consulta.">
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+</a>
+
+<a class="btn primary" href="#">
+<i class="fa-solid fa-calendar"></i>
+Agendar consulta
+</a>
+
+<a class="btn primary" href="https://www.linkedin.com/in/luciaerramuspe">
+<i class="fa-brands fa-linkedin"></i>
+LinkedIn
+</a>
+
+<a class="btn primary" href="https://mailto:lerramuspe.psi@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+Email
+</a>
+
+<a class="btn contacto" href="contacto.vcf" download>
+<i class="fa-solid fa-user-plus"></i>
+Guardar contacto
+</a>
+
+
+</div>
+
+
+    <div class="legal">
+
+       <a href="#" id="openPrivacy">Política de privacidad</a>
+
+    </div>
+
+</div>
+
+
+<div id="privacyModal" class="modal">
+
+<div class="modal-box">
+
+<span class="close">&times;</span>
+
+<h2>🔒 Política de privacidad</h2>
+
+<p>
+🧠 La información compartida a través de este sitio, correo electrónico o
+WhatsApp será utilizada únicamente para responder consultas profesionales
+y coordinar servicios psicológicos.
+</p>
+
+<p>
+🔐 Los datos personales serán tratados con confidencialidad y no serán
+compartidos con terceros.
+</p>
+
+<p>
+💬 El contacto digital no establece relación terapéutica hasta que se
+coordine formalmente una consulta profesional.
+</p>
+
+<p>
+📅 La coordinación de consultas y disponibilidad horaria se realiza de
+acuerdo con la agenda profesional vigente.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const modal = document.getElementById("privacyModal");
+const openBtn = document.getElementById("openPrivacy");
+const closeBtn = document.querySelector(".close");
+
+openBtn.onclick = function(e){
+
+e.preventDefault();
+modal.style.display = "flex";
+
+}
+
+closeBtn.onclick = function(){
+
+modal.style.display = "none";
+
+}
+
+window.onclick = function(event){
+
+if(event.target === modal){
+modal.style.display = "none";
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
