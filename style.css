@@ -22,15 +22,12 @@ padding:20px;
 
 background:white;
 width:380px;
-
 border-radius:16px;
-
 box-shadow:0 8px 25px rgba(0,0,0,0.08);
-
 text-align:center;
-
 overflow:hidden;
 animation:cardAppear 0.45s ease;
+position:relative;
 
 }
 
@@ -203,7 +200,7 @@ box-shadow:0 2px 6px rgba(0,0,0,0.15);
 
 .legal{
 
-margin-top:18px;
+margin-top:15px;
 
 font-size:12px;
 color:#666;
@@ -262,7 +259,7 @@ padding:20px;
 background:white;
 
 padding:28px;
-
+text-align:left;
 border-radius:14px;
 
 max-width:420px;
@@ -305,54 +302,67 @@ margin-bottom:14px;
 
 }
 
-/* ===== BOTON FLOTANTE COMPARTIR ===== */
 
+/* ===== BOTON COMPARTIR DENTRO DE CARD ===== */
 .share-float{
 
-position:fixed;
+position:absolute;
 
-bottom:22px;
-right:22px;
+bottom:15px;
+right:15px;
 
-width:52px;
-height:52px;
+width:42px;
+height:42px;
 
 border-radius:50%;
 
 border:none;
-
-background:#7B4A8F;
+background:#404040;
 color:white;
 
-font-size:18px;
+font-size:15px;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-box-shadow:0 6px 16px rgba(0,0,0,0.18);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 
 cursor:pointer;
 
 transition:all 0.2s ease;
 
-z-index:999;
+animation:shareAppear 0.5s ease;
+animation-delay:0.2s;
+animation-fill-mode:both;
 
 }
 
-
 /* hover */
+
+.share-float i{
+
+font-size:14px;
+
+}
 
 .share-float:hover{
 
 transform:translateY(-2px);
 
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+box-shadow:0 6px 14px rgba(0,0,0,0.2);
 
 }
 
+.share-float:hover{
 
-/* efecto press */
+transform:translateY(-2px);
+
+box-shadow:0 6px 14px rgba(0,0,0,0.18);
+
+}
+
+/* press */
 
 .share-float:active{
 
