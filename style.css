@@ -8,7 +8,11 @@ background:#EAE7E3;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+
+min-height:100vh;
+
+padding:20px;
+
 }
 
 
@@ -17,8 +21,7 @@ height:100vh;
 .card{
 
 background:white;
-width:320px;
-padding:30px;
+width:380px;
 
 border-radius:16px;
 
@@ -26,33 +29,31 @@ box-shadow:0 8px 25px rgba(0,0,0,0.08);
 
 text-align:center;
 
+overflow:hidden;
+animation:cardAppear 0.45s ease;
+
 }
 
 
-
-
-/* HEADER */
+/* ===== HEADER ===== */
 
 .header{
 
-height:110px;
+height:130px;
 
 background-image:url("background.png");
 
 background-size:cover;
 background-position:center;
 
-border-radius:16px 16px 0 0;
-
 display:flex;
 justify-content:center;
 align-items:flex-end;
 
-padding-bottom:0;
-
 }
 
-/* FOTO PERFIL */
+
+/* ===== FOTO PERFIL ===== */
 
 .profile{
 
@@ -69,15 +70,18 @@ object-fit:cover;
 
 }
 
-/* INFO */
+
+/* ===== INFO ===== */
 
 .info{
 
 margin-top:55px;
+padding:0 30px 20px 30px;
 
 }
 
-/* REGISTROS PROFESIONALES */
+
+/* ===== REGISTROS PROFESIONALES ===== */
 
 .registro{
 
@@ -102,7 +106,7 @@ color:#3A3A3A;
 
 color:#7B4A8F;
 font-size:14px;
-margin-bottom:20px;
+margin-bottom:16px;
 
 }
 
@@ -113,7 +117,10 @@ margin-bottom:20px;
 
 display:flex;
 flex-direction:column;
-gap:12px;
+
+gap:14px;
+
+padding:0 30px 25px 30px;
 
 }
 
@@ -136,6 +143,9 @@ justify-content:center;
 gap:8px;
 
 transition:all 0.2s ease;
+
+cursor:pointer;
+will-change: transform;
 
 }
 
@@ -178,18 +188,31 @@ box-shadow:0 6px 14px rgba(0,0,0,0.12);
 
 }
 
+/* ===== EFECTO PRESION BOTON ===== */
+
+.btn:active{
+
+transform:translateY(0px) scale(0.97);
+
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+
+}
+
 
 /* ===== LINKS LEGALES ===== */
 
 .legal{
 
-margin-top:20px;
+margin-top:18px;
+
 font-size:12px;
 color:#666;
 
 display:flex;
 justify-content:center;
 gap:15px;
+
+padding-bottom:20px;
 
 }
 
@@ -227,6 +250,8 @@ background:rgba(0,0,0,0.45);
 justify-content:center;
 align-items:center;
 
+padding:20px;
+
 }
 
 
@@ -241,6 +266,7 @@ padding:28px;
 border-radius:14px;
 
 max-width:420px;
+width:100%;
 
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
 
@@ -271,15 +297,89 @@ color:black;
 
 }
 
+/* ===== ESPACIADO TEXTO MODAL ===== */
 
-/* ===== ANIMACION ===== */
+.modal-box p{
 
-@keyframes fadeIn{
+margin-bottom:14px;
+
+}
+
+/* ===== BOTON FLOTANTE COMPARTIR ===== */
+
+.share-float{
+
+position:fixed;
+
+bottom:22px;
+right:22px;
+
+width:52px;
+height:52px;
+
+border-radius:50%;
+
+border:none;
+
+background:#7B4A8F;
+color:white;
+
+font-size:18px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 6px 16px rgba(0,0,0,0.18);
+
+cursor:pointer;
+
+transition:all 0.2s ease;
+
+z-index:999;
+
+}
+
+
+/* hover */
+
+.share-float:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+
+/* efecto press */
+
+.share-float:active{
+
+transform:scale(0.92);
+
+}
+
+@media (max-width:480px){
+
+.card{
+
+width:100%;
+
+}
+
+}
+
+
+
+/* ===== ANIMACION ENTRADA CARD ===== */
+
+@keyframes cardAppear{
 
 from{
 
 opacity:0;
-transform:translateY(10px);
+transform:translateY(12px);
 
 }
 
@@ -289,14 +389,5 @@ opacity:1;
 transform:translateY(0);
 
 }
-
-}
-
-
-/* ===== ESPACIADO TEXTO MODAL ===== */
-
-.modal-box p{
-
-margin-bottom:14px;
 
 }

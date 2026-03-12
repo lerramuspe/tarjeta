@@ -57,7 +57,7 @@
 
 <div class="buttons">
 
-<a class="btn primary" href="https://wa.me/59897331847?text=Hola%20Lucia%2C%20vi%20tu%20tarjeta%20digital%20y%20quisiera%20consultar%20por%20una%20consulta.">
+<a class="btn primary" href="https://wa.me/59897331847?text=Hola%20Lucía,%20te%20consulto%20por:">
 <i class="fa-brands fa-whatsapp"></i>
 WhatsApp
 </a>
@@ -77,10 +77,14 @@ LinkedIn
 Email
 </a>
 
-<a class="btn contacto" href="contacto.vcf" download>
+<a class="btn contacto" href="contacto.vcf">
 <i class="fa-solid fa-user-plus"></i>
 Guardar contacto
 </a>
+
+<button class="share-float" onclick="compartirTarjeta()">
+<i class="fa-solid fa-share-nodes"></i>
+</button>
 
 
 </div>
@@ -151,6 +155,20 @@ window.onclick = function(event){
 
 if(event.target === modal){
 modal.style.display = "none";
+}
+
+}
+
+function compartirTarjeta() {
+
+if (navigator.share) {
+
+navigator.share({
+title: "Lucia Erramuspe - Psicóloga",
+text: "Te comparto mi tarjeta profesional",
+url: "https://luciaerramuspe.netlify.app"
+});
+
 }
 
 }
