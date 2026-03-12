@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Lucia Erramuspe | Psicóloga</title>
-
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="icon" href="logo.png">
@@ -21,7 +20,8 @@
 <meta property="og:type" content="website">
 
 <meta property="og:url" content="https://tuweb.com">
-
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js"></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -62,7 +62,7 @@
 WhatsApp
 </a>
 
-<a class="btn primary" href="#">
+<a class="btn primary" onclick="abrirCalendly();">
 <i class="fa-solid fa-calendar"></i>
 Agendar consulta
 </a>
@@ -132,6 +132,21 @@ acuerdo con la agenda profesional vigente.
 
 </div>
 
+<div id="calendlyModal" class="modal">
+
+<div class="modal-box">
+
+<span class="close" id="closeCalendary" onclick="cerrarCalendly();">&times;</span>
+
+<div class="calendly-inline-widget"
+data-url="https://calendly.com/consulta-luciaerramuspe"
+style="min-width:320px;height:650px;">
+</div>
+
+</div>
+
+</div>
+
 <script>
 
 const modal = document.getElementById("privacyModal");
@@ -171,6 +186,14 @@ url: "https://luciaerramuspe.netlify.app"
 
 }
 
+}
+
+function abrirCalendly(){
+document.getElementById("calendlyModal").style.display="flex";
+}
+
+function cerrarCalendly(){
+document.getElementById("calendlyModal").style.display="none";
 }
 
 </script>
