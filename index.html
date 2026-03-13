@@ -23,6 +23,16 @@
 
 <meta property="og:url" content="https://luciaerramuspe.netlify.app">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GFC86S3B70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GFC86S3B70');
+</script>
+
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 <script type="application/ld+json">
@@ -197,6 +207,42 @@ document.getElementById("calendlyModal").style.display="flex";
 
 function cerrarCalendly(){
 document.getElementById("calendlyModal").style.display="none";
+}
+const params = new URLSearchParams(window.location.search);
+
+if(params.has("qr")){
+
+const banner = document.createElement("div");
+
+banner.innerHTML = "👋 Escaneaste mi tarjeta profesional. Podés agendar consulta o escribirme por WhatsApp.";
+
+banner.style.position = "fixed";
+banner.style.top = "0";
+banner.style.left = "0";
+banner.style.width = "100%";
+banner.style.background = "#7B4A8F";
+banner.style.color = "white";
+banner.style.textAlign = "center";
+banner.style.padding = "12px";
+banner.style.fontSize = "14px";
+banner.style.zIndex = "9999";
+banner.style.opacity = "0";
+banner.style.transition = "opacity 0.5s ease";
+
+document.body.appendChild(banner);
+
+setTimeout(()=>{
+banner.style.opacity="1";
+},100);
+
+setTimeout(()=>{
+banner.style.opacity="0";
+},4000);
+
+setTimeout(()=>{
+banner.remove();
+},4500);
+
 }
 
 </script>
